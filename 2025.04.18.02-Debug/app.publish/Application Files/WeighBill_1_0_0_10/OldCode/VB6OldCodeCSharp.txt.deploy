@@ -1,0 +1,3360 @@
+﻿
+internal partial class SurroundingClass
+{
+    class _failedMemberConversionMarker1
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+    Begin*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 24
+
+
+        Input:
+        VERSION 5.00
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.Form Frmmain*/
+
+    class _failedMemberConversionMarker2
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 62
+
+
+    Input:
+       BackColor       =   &H00DCDFB0&
+
+     */
+    class _failedMemberConversionMarker3
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 98
+
+
+    Input:
+       Caption         =   "Main Menu"
+
+     */
+    class _failedMemberConversionMarker4
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 134
+
+
+    Input:
+       ClientHeight    =   8250
+
+     */
+    class _failedMemberConversionMarker5
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 163
+
+
+    Input:
+       ClientLeft      =   60
+
+     */
+    class _failedMemberConversionMarker6
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 190
+
+
+    Input:
+       ClientTop       =   405
+
+     */
+    class _failedMemberConversionMarker7
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 218
+
+
+    Input:
+       ClientWidth     =   11055
+
+     */
+    class _failedMemberConversionMarker8
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 248
+
+
+    Input:
+       ControlBox      =   0   'False
+
+     */
+    class _failedMemberConversionMarker9
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 283
+
+
+    Input:
+       LinkTopic       =   "Form1"
+
+     */
+    class _failedMemberConversionMarker10
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 315
+
+
+    Input:
+       MDIChild        =   -1  'True
+
+     */
+    class _failedMemberConversionMarker11
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 349
+
+
+    Input:
+       ScaleHeight     =   8250
+
+     */
+    class _failedMemberConversionMarker12
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 378
+
+
+    Input:
+       ScaleWidth      =   11055
+
+     */
+    class _failedMemberConversionMarker13
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 408
+
+
+    Input:
+       Visible         =   0   'False
+
+     */
+    class _failedMemberConversionMarker14
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+ Begin*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 443
+
+
+        Input:
+           WindowState     =   2  'Maximized
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.Frame FrameButton3*/
+
+    class _failedMemberConversionMarker15
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 514
+
+
+        Input:
+              BackColor       =   &H00DCDFB0&
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker16
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 580
+
+
+    Input:
+             Name            =   "MS Sans Serif"
+
+     */
+    class _failedMemberConversionMarker17
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 626
+
+
+    Input:
+             Size            =   18
+
+     */
+    class _failedMemberConversionMarker18
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 659
+
+
+    Input:
+             Charset         =   0
+
+     */
+    class _failedMemberConversionMarker19
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 691
+
+
+    Input:
+             Weight          =   700
+
+     */
+    class _failedMemberConversionMarker20
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 725
+
+
+    Input:
+             Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker21
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 766
+
+
+    Input:
+             Italic          =   0   'False
+
+     */
+    class _failedMemberConversionMarker22
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 807
+
+
+    Input:
+             Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker23
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 848
+
+
+    Input:
+          EndProperty
+
+     */
+    class _failedMemberConversionMarker24
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 867
+
+
+    Input:
+          Height          =   1335
+
+     */
+    class _failedMemberConversionMarker25
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 899
+
+
+    Input:
+          Left            =   870
+
+     */
+    class _failedMemberConversionMarker26
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 930
+
+
+    Input:
+          TabIndex        =   12
+
+     */
+    class _failedMemberConversionMarker27
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 960
+
+
+    Input:
+          Top             =   2520
+
+     */
+    class _failedMemberConversionMarker28
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 992
+
+
+    Input:
+          Visible         =   0   'False
+
+     */
+    class _failedMemberConversionMarker29
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1030
+
+
+        Input:
+              Width           =   2295
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton Command1*/
+
+    class _failedMemberConversionMarker30
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1102
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker31
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1144
+
+
+        Input:
+                 Caption         =   "&Billing"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker32
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1215
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker33
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1256
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker34
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1292
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker35
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1327
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker36
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1364
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker37
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1408
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker38
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1451
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker39
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1495
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker40
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1517
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker41
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1551
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker42
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1585
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker43
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1629
+
+
+    Input:
+             TabIndex        =   15
+
+     */
+    class _failedMemberConversionMarker44
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1662
+
+
+    Input:
+             Top             =   810
+
+     */
+    class _failedMemberConversionMarker45
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1696
+
+
+    Input:
+             Width           =   2055
+
+     */
+    class _failedMemberConversionMarker46
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 1737
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandVehicleReport*/
+
+    class _failedMemberConversionMarker47
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1794
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker48
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1836
+
+
+        Input:
+                 Caption         =   "&Vehicle Report"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker49
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1914
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker50
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1955
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker51
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 1991
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker52
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2026
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker53
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2063
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker54
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2107
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker55
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2150
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker56
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2194
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker57
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2216
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker58
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2250
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker59
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2284
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker60
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2328
+
+
+    Input:
+             TabIndex        =   13
+
+     */
+    class _failedMemberConversionMarker61
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2361
+
+
+    Input:
+             Top             =   360
+
+     */
+    class _failedMemberConversionMarker62
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2395
+
+
+    Input:
+             Width           =   2055
+
+     */
+    class _failedMemberConversionMarker63
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 2436
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandCashStatement*/
+
+    class _failedMemberConversionMarker64
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2493
+
+
+        Input:
+                 Caption         =   "&Cash Statement"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker65
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2571
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker66
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2612
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker67
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2648
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker68
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2683
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker69
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2720
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker70
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2764
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker71
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2807
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker72
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2851
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker73
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2873
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker74
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2907
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker75
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2941
+
+
+    Input:
+             TabIndex        =   14
+
+     */
+    class _failedMemberConversionMarker76
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 2974
+
+
+    Input:
+             Top             =   360
+
+     */
+    class _failedMemberConversionMarker77
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3008
+
+
+    Input:
+             Visible         =   0   'False
+
+     */
+    class _failedMemberConversionMarker78
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3049
+
+
+    Input:
+             Width           =   2055
+
+     */
+    class _failedMemberConversionMarker79
+    {
+    }
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 3090
+
+
+    Input:
+          End
+
+     */
+    class _failedMemberConversionMarker80
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+ Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 3098
+
+
+        Input:
+           End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.Frame FrameButton2*/
+
+    class _failedMemberConversionMarker81
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3136
+
+
+        Input:
+              BackColor       =   &H00DCDFB0&
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker82
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3202
+
+
+    Input:
+             Name            =   "MS Sans Serif"
+
+     */
+    class _failedMemberConversionMarker83
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3248
+
+
+    Input:
+             Size            =   18
+
+     */
+    class _failedMemberConversionMarker84
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3281
+
+
+    Input:
+             Charset         =   0
+
+     */
+    class _failedMemberConversionMarker85
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3313
+
+
+    Input:
+             Weight          =   700
+
+     */
+    class _failedMemberConversionMarker86
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3347
+
+
+    Input:
+             Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker87
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3388
+
+
+    Input:
+             Italic          =   0   'False
+
+     */
+    class _failedMemberConversionMarker88
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3429
+
+
+    Input:
+             Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker89
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3470
+
+
+    Input:
+          EndProperty
+
+     */
+    class _failedMemberConversionMarker90
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3489
+
+
+    Input:
+          Height          =   2565
+
+     */
+    class _failedMemberConversionMarker91
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3521
+
+
+    Input:
+          Left            =   960
+
+     */
+    class _failedMemberConversionMarker92
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3552
+
+
+    Input:
+          TabIndex        =   11
+
+     */
+    class _failedMemberConversionMarker93
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3582
+
+
+    Input:
+          Top             =   1860
+
+     */
+    class _failedMemberConversionMarker94
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3614
+
+
+    Input:
+          Visible         =   0   'False
+
+     */
+    class _failedMemberConversionMarker95
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3652
+
+
+        Input:
+              Width           =   1935
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandCustomers*/
+
+    class _failedMemberConversionMarker96
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3732
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker97
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3774
+
+
+        Input:
+                 Caption         =   "&Customers"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker98
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3847
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker99
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3888
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker100
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3924
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker101
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3959
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker102
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 3996
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker103
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4040
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker104
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4083
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker105
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4127
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker106
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4149
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker107
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4183
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker108
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4217
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker109
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4261
+
+
+    Input:
+             TabIndex        =   7
+
+     */
+    class _failedMemberConversionMarker110
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4293
+
+
+    Input:
+             Top             =   1200
+
+     */
+    class _failedMemberConversionMarker111
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4328
+
+
+    Input:
+             Width           =   1695
+
+     */
+    class _failedMemberConversionMarker112
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 4369
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandExit1*/
+
+    class _failedMemberConversionMarker113
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4418
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker114
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4460
+
+
+        Input:
+                 Caption         =   "E&xit"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker115
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4528
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker116
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4569
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker117
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4605
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker118
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4640
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker119
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4677
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker120
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4721
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker121
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4764
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker122
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4808
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker123
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4830
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker124
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4864
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker125
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4898
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker126
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4942
+
+
+    Input:
+             TabIndex        =   9
+
+     */
+    class _failedMemberConversionMarker127
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 4974
+
+
+    Input:
+             Top             =   2040
+
+     */
+    class _failedMemberConversionMarker128
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5009
+
+
+    Input:
+             Width           =   1695
+
+     */
+    class _failedMemberConversionMarker129
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 5050
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandMaterials*/
+
+    class _failedMemberConversionMarker130
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5103
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker131
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5145
+
+
+        Input:
+                 Caption         =   "&Material"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker132
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5217
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker133
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5258
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker134
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5294
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker135
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5329
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker136
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5366
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker137
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5410
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker138
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5453
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker139
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5497
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker140
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5519
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker141
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5553
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker142
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5587
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker143
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5631
+
+
+    Input:
+             TabIndex        =   5
+
+     */
+    class _failedMemberConversionMarker144
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5663
+
+
+    Input:
+             Top             =   360
+
+     */
+    class _failedMemberConversionMarker145
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5697
+
+
+    Input:
+             Width           =   1695
+
+     */
+    class _failedMemberConversionMarker146
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 5738
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandVehicles*/
+
+    class _failedMemberConversionMarker147
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5790
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker148
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5832
+
+
+        Input:
+                 Caption         =   "&Vehicle"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker149
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5903
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker150
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5944
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker151
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 5980
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker152
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6015
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker153
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6052
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker154
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6096
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker155
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6139
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker156
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6183
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker157
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6205
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker158
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6239
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker159
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6273
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker160
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6317
+
+
+    Input:
+             TabIndex        =   6
+
+     */
+    class _failedMemberConversionMarker161
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6349
+
+
+    Input:
+             Top             =   780
+
+     */
+    class _failedMemberConversionMarker162
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6383
+
+
+    Input:
+             Width           =   1695
+
+     */
+    class _failedMemberConversionMarker163
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 6424
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandReminders*/
+
+    class _failedMemberConversionMarker164
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6477
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker165
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6519
+
+
+        Input:
+                 Caption         =   "&Reminder"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker166
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6591
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker167
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6632
+
+
+    Input:
+                Size            =   12
+
+     */
+    class _failedMemberConversionMarker168
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6668
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker169
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6703
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker170
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6740
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker171
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6784
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker172
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6827
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker173
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6871
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker174
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6893
+
+
+    Input:
+             Height          =   375
+
+     */
+    class _failedMemberConversionMarker175
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6927
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker176
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 6961
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker177
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7005
+
+
+    Input:
+             TabIndex        =   8
+
+     */
+    class _failedMemberConversionMarker178
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7037
+
+
+    Input:
+             Top             =   1620
+
+     */
+    class _failedMemberConversionMarker179
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7072
+
+
+    Input:
+             Width           =   1695
+
+     */
+    class _failedMemberConversionMarker180
+    {
+    }
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 7113
+
+
+    Input:
+          End
+
+     */
+    class _failedMemberConversionMarker181
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+ Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 7121
+
+
+        Input:
+           End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.Frame Framebutton1*/
+
+    class _failedMemberConversionMarker182
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7159
+
+
+        Input:
+              BackColor       =   &H00DCDFB0&
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker183
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7225
+
+
+    Input:
+             Name            =   "MS Sans Serif"
+
+     */
+    class _failedMemberConversionMarker184
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7271
+
+
+    Input:
+             Size            =   18
+
+     */
+    class _failedMemberConversionMarker185
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7304
+
+
+    Input:
+             Charset         =   0
+
+     */
+    class _failedMemberConversionMarker186
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7336
+
+
+    Input:
+             Weight          =   700
+
+     */
+    class _failedMemberConversionMarker187
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7370
+
+
+    Input:
+             Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker188
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7411
+
+
+    Input:
+             Italic          =   0   'False
+
+     */
+    class _failedMemberConversionMarker189
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7452
+
+
+    Input:
+             Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker190
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7493
+
+
+    Input:
+          EndProperty
+
+     */
+    class _failedMemberConversionMarker191
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7512
+
+
+    Input:
+          Height          =   3975
+
+     */
+    class _failedMemberConversionMarker192
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7544
+
+
+    Input:
+          Left            =   840
+
+     */
+    class _failedMemberConversionMarker193
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7575
+
+
+    Input:
+          TabIndex        =   10
+
+     */
+    class _failedMemberConversionMarker194
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7605
+
+
+    Input:
+          Top             =   960
+
+     */
+    class _failedMemberConversionMarker195
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7636
+
+
+        Input:
+              Width           =   2535
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandReport*/
+
+    class _failedMemberConversionMarker196
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7713
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker197
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7755
+
+
+        Input:
+                 Caption         =   "&Reports"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker198
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7826
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker199
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7867
+
+
+    Input:
+                Size            =   15.75
+
+     */
+    class _failedMemberConversionMarker200
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7906
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker201
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7941
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker202
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 7978
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker203
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8022
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker204
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8065
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker205
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8109
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker206
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8131
+
+
+    Input:
+             Height          =   615
+
+     */
+    class _failedMemberConversionMarker207
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8165
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker208
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8199
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker209
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8243
+
+
+    Input:
+             TabIndex        =   2
+
+     */
+    class _failedMemberConversionMarker210
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8275
+
+
+    Input:
+             Top             =   1800
+
+     */
+    class _failedMemberConversionMarker211
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8310
+
+
+    Input:
+             Width           =   2295
+
+     */
+    class _failedMemberConversionMarker212
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 8351
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandExit*/
+
+    class _failedMemberConversionMarker213
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8399
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker214
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8441
+
+
+        Input:
+                 Caption         =   "E&xit"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker215
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8509
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker216
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8550
+
+
+    Input:
+                Size            =   15.75
+
+     */
+    class _failedMemberConversionMarker217
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8589
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker218
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8624
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker219
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8661
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker220
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8705
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker221
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8748
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker222
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8792
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker223
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8814
+
+
+    Input:
+             Height          =   615
+
+     */
+    class _failedMemberConversionMarker224
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8848
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker225
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8882
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker226
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8926
+
+
+    Input:
+             TabIndex        =   4
+
+     */
+    class _failedMemberConversionMarker227
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8958
+
+
+    Input:
+             Top             =   3240
+
+     */
+    class _failedMemberConversionMarker228
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 8993
+
+
+    Input:
+             Width           =   2295
+
+     */
+    class _failedMemberConversionMarker229
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 9034
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandClient*/
+
+    class _failedMemberConversionMarker230
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9084
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker231
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9126
+
+
+        Input:
+                 Caption         =   "Weigh&Bridge"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker232
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9201
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker233
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9242
+
+
+    Input:
+                Size            =   15.75
+
+     */
+    class _failedMemberConversionMarker234
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9281
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker235
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9316
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker236
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9353
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker237
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9397
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker238
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9440
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker239
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9484
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker240
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9506
+
+
+    Input:
+             Height          =   615
+
+     */
+    class _failedMemberConversionMarker241
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9540
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker242
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9574
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker243
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9618
+
+
+    Input:
+             TabIndex        =   3
+
+     */
+    class _failedMemberConversionMarker244
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9650
+
+
+    Input:
+             Top             =   2520
+
+     */
+    class _failedMemberConversionMarker245
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9685
+
+
+    Input:
+             Width           =   2295
+
+     */
+    class _failedMemberConversionMarker246
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 9726
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandMaster*/
+
+    class _failedMemberConversionMarker247
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9776
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker248
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9818
+
+
+        Input:
+                 Caption         =   "&Master"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker249
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9888
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker250
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9929
+
+
+    Input:
+                Size            =   15.75
+
+     */
+    class _failedMemberConversionMarker251
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 9968
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker252
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10003
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker253
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10040
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker254
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10084
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker255
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10127
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker256
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10171
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker257
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10193
+
+
+    Input:
+             Height          =   615
+
+     */
+    class _failedMemberConversionMarker258
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10227
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker259
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10261
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker260
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10305
+
+
+    Input:
+             TabIndex        =   1
+
+     */
+    class _failedMemberConversionMarker261
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10337
+
+
+    Input:
+             Top             =   1080
+
+     */
+    class _failedMemberConversionMarker262
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10372
+
+
+    Input:
+             Width           =   2295
+
+     */
+    class _failedMemberConversionMarker263
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+Begin*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 10413
+
+
+        Input:
+              End
+
+         */
+    private object VB;/* TODO ERROR: Skipped SkippedTokensTrivia
+.CommandButton CommandWeigh*/
+
+    class _failedMemberConversionMarker264
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10462
+
+
+    Input:
+             BackColor       =   &H00C0C000&
+
+     */
+    class _failedMemberConversionMarker265
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+BeginProperty*/
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10504
+
+
+        Input:
+                 Caption         =   "&Weigh"
+
+         */
+    private object Font;
+
+    class _failedMemberConversionMarker266
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10573
+
+
+    Input:
+                Name            =   "Arial"
+
+     */
+    class _failedMemberConversionMarker267
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10614
+
+
+    Input:
+                Size            =   15.75
+
+     */
+    class _failedMemberConversionMarker268
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10653
+
+
+    Input:
+                Charset         =   0
+
+     */
+    class _failedMemberConversionMarker269
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10688
+
+
+    Input:
+                Weight          =   700
+
+     */
+    class _failedMemberConversionMarker270
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10725
+
+
+    Input:
+                Underline       =   0   'False
+
+     */
+    class _failedMemberConversionMarker271
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10769
+
+
+    Input:
+                Italic          =   -1  'True
+
+     */
+    class _failedMemberConversionMarker272
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10812
+
+
+    Input:
+                Strikethrough   =   0   'False
+
+     */
+    class _failedMemberConversionMarker273
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10856
+
+
+    Input:
+             EndProperty
+
+     */
+    class _failedMemberConversionMarker274
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10878
+
+
+    Input:
+             Height          =   615
+
+     */
+    class _failedMemberConversionMarker275
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10912
+
+
+    Input:
+             Left            =   120
+
+     */
+    class _failedMemberConversionMarker276
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10946
+
+
+    Input:
+             Style           =   1  'Graphical
+
+     */
+    class _failedMemberConversionMarker277
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 10990
+
+
+    Input:
+             TabIndex        =   0
+
+     */
+    class _failedMemberConversionMarker278
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 11022
+
+
+    Input:
+             Top             =   360
+
+     */
+    class _failedMemberConversionMarker279
+    {
+    }
+#error Cannot convert EmptyStatementSyntax - see comment for details
+    /* Cannot convert EmptyStatementSyntax, CONVERSION ERROR: Conversion for EmptyStatement not implemented, please report this issue in '' at character 11056
+
+
+    Input:
+             Width           =   2295
+
+     */
+    class _failedMemberConversionMarker280
+    {
+    }
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 11097
+
+
+    Input:
+          End
+
+     */
+    class _failedMemberConversionMarker281
+    {
+    }
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 11105
+
+
+    Input:
+       End
+
+     */
+    class _failedMemberConversionMarker282
+    {
+    }
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+    Attribute*/
+#error Cannot convert StopOrEndStatementSyntax - see comment for details
+    /* Cannot convert StopOrEndStatementSyntax, CONVERSION ERROR: Conversion for EndStatement not implemented, please report this issue in 'End' at character 11110
+
+
+        Input:
+        End
+
+         */
+    private object VB_Name = "Frmmain";
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+    Attribute*/
+    private object VB_GlobalNameSpace = false;
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+    Attribute*/
+    private object VB_Creatable = false;
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+    Attribute*/
+    private object VB_PredeclaredId = true;
+    /* TODO ERROR: Skipped SkippedTokensTrivia
+    Attribute*/
+    private object VB_Exposed = false;
+
+    private void Command1_Click()
+    {
+        FrameButton3.Visible = false;
+        Framebutton1.Visible = true;
+        FrmBilling.Show();
+    }
+
+    private void CommandCashStatement_Click()
+    {
+        FrameButton3.Visible = false;
+        Framebutton1.Visible = true;
+        FrmCashStatement.Show();
+    }
+
+    private void CommandClient_Click()
+    {
+        FrmClient.Show();
+    }
+
+    private void CommandCustomers_Click()
+    {
+        FrameButton2.Visible = false;
+        Framebutton1.Visible = true;
+        FrmCustomer.Show();
+    }
+
+    private void CommandExit_Click()
+    {
+        Unload(this);
+        Unload(FrmMDI);
+    }
+
+    private void CommandExit1_Click()
+    {
+        FrameButton2.Visible = false;
+        Framebutton1.Visible = true;
+    }
+
+    private void CommandMaster_Click()
+    {
+        Framebutton1.Visible = false;
+        FrameButton2.Visible = true;
+    }
+
+    private void CommandMaterials_Click()
+    {
+        FrameButton2.Visible = false;
+        Framebutton1.Visible = true;
+        formMaterial1.Show();
+    }
+
+    private void CommandReminders_Click()
+    {
+        FrameButton2.Visible = false;
+        Framebutton1.Visible = true;
+        frmReminder.Show();
+    }
+
+    private void CommandReport_Click()
+    {
+        Framebutton1.Visible = false;
+        FrameButton3.Visible = true;
+    }
+
+    private void CommandVehicleReport_Click()
+    {
+        FrameButton3.Visible = false;
+        Framebutton1.Visible = true;
+        FrmVehicleReport.Show();
+    }
+
+    private void CommandVehicles_Click()
+    {
+        FrameButton2.Visible = false;
+        Framebutton1.Visible = true;
+        FrmVehicle.Show();
+    }
+
+    private void CommandWeigh_Click()
+    {
+        FrmWeigh.Show();
+    }
+
+    private void Timer1_Timer()
+    {
+
+    }
+
+
+}

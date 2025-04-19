@@ -1,0 +1,89 @@
+﻿DataView dvRecVehicle = new DataView(RecVehicle);
+dvRecVehicle.RowFilter = $"vehname = '{ComVehicleType.Text}'";
+
+DataRow drVehicle = dvRecVehicle.ToTable().Rows[0];
+TextAmount.Text = (ComMaterialName.Text == "EMPTY") ? drVehicle["tarerate"].ToString() : drVehicle["grossrate"].ToString();
+
+//var    RecSettingl = SelectRecordsFromDB($"select wm.srno as [Serial No], v.vehname, m.matname" +
+//        $" ( from weighmaster wm  " +
+//        $"left join vehicle v on wm.vehno = v.vehno ) " +
+//        $"left join material m on wm.matno = m.matno " +
+//        $" where wm.vehicleregno='qa1232' and wm.basesrno= 'A00111' order by wm.srno");
+
+RecMaterial = SelectRecordsFromDB($"select * from material");
+RecVehicle = SelectRecordsFromDB($"select * from vehicle");
+RecWeighMaster = SelectRecordsFromDB($"select * from weighmaster");
+RecReminder = SelectRecordsFromDB($"select * from reminder");
+RecLastSerialNo = SelectRecordsFromDB($"select * from lastserialno");
+RecCustomerMaster = SelectRecordsFromDB($"select * from CustomerMaster order by CustomerName");
+RecWeighBilling = SelectRecordsFromDB($"select * from WeighBilling");
+
+
+
+            UpdateWeighMaster(TextSerialNo.Text,
+                TextVehicleRegNo.Text,
+                (ComMaterialName.Text == "EMPTY") ? "0" : ComMaterialName.SelectedValue.ToString(),
+                ComVehicleType.SelectedValue.ToString(),
+                (TextGrossWeight.Text == "") ? 0 : Convert.ToDouble(TextGrossWeight.Text),
+                (TextGrossWeight.Text == "") ? null : GrossTime,
+                (TextTareWeight.Text == "") ? 0 : Convert.ToDouble(TextTareWeight.Text),
+                (TextTareWeight.Text == "") ? null : TareTime,
+                (TextNetWeight.Text == "") ? 0 : Convert.ToDouble(TextNetWeight.Text),
+                TextAmount.Text,
+                (CheckNewWeighment.Checked) ? "N" : "O",
+                (CheckNewWeighment.Checked) ? TextSerialNo.Text : BaseSerialNo,
+                DateTime.Now.ToString(),
+                TextContainerNo.Text);
+
+
+
+                 command.CommandType = CommandType.Text;
+
+                    command.CommandText = "INSERT INTO WeighMaster " +
+                    "([srno], [vehicleregno], [matno], [vehno], [grossweight], [grossweightdate]," +
+                    " [tareweight], [tareweightdate], [netweight], [amount], [weighstatus], [basesrno], " +
+                    " [weighdate], [containerno]) " +
+                    " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+
+
+
+                    command.Parameters.AddWithValue("@srno", TextSerialNo.Text);
+                    command.Parameters.AddWithValue("@vehicleregno", TextVehicleRegNo.Text);
+
+                    command.Parameters.AddWithValue("@matno", (ComMaterialName.Text == "EMPTY") ? "0" : ComMaterialName.SelectedValue.ToString());
+                    command.Parameters.AddWithValue("@vehno", ComVehicleType.SelectedValue.ToString());
+
+                    command.Parameters.AddWithValue("@grossweight", (TextGrossWeight.Text == "") ? 0 : Convert.ToDouble(TextGrossWeight.Text));
+                    command.Parameters.AddWithValue("@grossweightdate", GrossTime == null ? (object)DBNull.Value : GrossTime);
+
+                    command.Parameters.AddWithValue("@tareweight", (TextTareWeight.Text == "") ? 0 : Convert.ToDouble(TextTareWeight.Text));
+                    command.Parameters.AddWithValue("@tareweightdate", TareTime == null ? (object)DBNull.Value : TareTime);
+
+                    command.Parameters.AddWithValue("@netweight", (TextNetWeight.Text == "") ? 0 : Convert.ToDouble(TextNetWeight.Text));
+                    command.Parameters.AddWithValue("@amount", TextAmount.Text);
+                    command.Parameters.AddWithValue("@weighstatus", (CheckNewWeighment.Checked) ? "N" : "O");
+                    command.Parameters.AddWithValue("@basesrno", (CheckNewWeighment.Checked) ? TextSerialNo.Text : BaseSerialNo);
+
+                    command.Parameters.AddWithValue("@weighdate", DateTime.Now);
+                    command.Parameters.AddWithValue("@containerno", TextContainerNo.Text);
+
+                    command.Connection = conn;
+                    conn.Open();
+                    command.ExecuteNonQuery();
+
+
+                    //https://stackoverflow.com/questions/6103705/how-can-i-send-a-file-document-to-the-printer-and-have-it-print
+            var pi = new ProcessStartInfo(path);
+            pi.UseShellExecute = true;
+            pi.Verb = "print";
+            //pi.Arguments = "PATH_TO_PRINTER";pi.Verb = "PrintTo";
+            var process = System.Diagnostics.Process.Start(pi);
+
+
+               public string useRegex(string input, string pattern)
+        {
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+            Match match = regex.Match(input);
+            return match.Groups[1].Value;
+        }
+

@@ -1,0 +1,977 @@
+﻿using System;
+using System.Text;
+using System.Data;
+using System.Data.OleDb;
+using System.IO;
+using System.Windows.Forms;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text.RegularExpressions;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Configuration;
+using WeighBill.BusinessObjects;
+using System.Timers;
+using System.ComponentModel;
+using WeighBill.Data;
+using System.Net;
+using System.Net.Http;
+using System.Reflection.Emit;
+using System.Collections;
+
+namespace WeighBill
+{
+    public partial class WeighForm : Form
+    {
+        bool IsFormLoading, btnCancelAddClicked, btnBackClicked, btnAddClicked, btnFindClicked, SecondFindInd, IsMaterialEmpty = false;
+
+        bool HasTareWeight = false;
+
+        public static readonly object DBNullValue = (object)DBNull.Value;
+        List<WeighInfo> GridData = new List<WeighInfo>();
+
+        private double ReceivedWeight;
+        private string NewSrNo;
+        private string FormBaseSerialNo;
+        private DateTime? GrossTime;
+        private DateTime? TareTime;
+
+
+        private int OWCheck; // Old Weight check
+        private bool IsWeighReceived; // weight received check
+
+        private long CustomerCode;
+
+        public static readonly string provider = ConfigurationManager.AppSettings["Provider"];
+        public static readonly string database = ConfigurationManager.AppSettings["AccessDB"];
+        public static readonly string ipAddress = ConfigurationManager.AppSettings["ipAddress"];
+        public static readonly int port = Convert.ToInt16(ConfigurationManager.AppSettings["port"]);
+
+        public static readonly string connectionString = $"{provider}Data Source={AppContext.BaseDirectory}\\{database}";
+
+        private BackgroundWorker worker;
+        protected DataAccess dataAccess = new DataAccess();
+
+        DateTime? dtEmpty = null;
+
+        public WeighForm()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            IsFormLoading = true;
+            worker = new BackgroundWorker()
+            {
+                WorkerSupportsCancellation = true,
+                WorkerReportsProgress = true
+            };
+            worker.DoWork += worker_DoWork;
+
+            if (!worker.IsBusy)
+                worker.RunWorkerAsync();
+
+            OWCheck = 0;
+            IsWeighReceived = false;
+
+            dataAccess.RemoveRecords();
+
+            gvWeighment.AutoGenerateColumns = false;
+
+            LabelWeightReceived.Text = "";
+
+            SetDropdownvalues();
+            ClearDataGrid();
+
+            FrameButton1.Visible = true;
+            Framebutton2.Visible = false;
+            FrameButton3.Visible = false;
+            IsFormLoading = false;
+        }
+
+        #region Async Operation
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker w = (BackgroundWorker)sender;
+
+            System.Timers.Timer timer = new System.Timers.Timer(500);
+            timer.Elapsed += timer_Elapsed;
+            timer.Start();
+
+            Start();
+            //todo:create connection. if connected, read data
+
+            while (true)
+            {
+                if (w.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+        }
+
+        private async void Start()
+        {
+            try
+            {
+                using (TcpClient client = new TcpClient())
+                {
+                    await client.ConnectAsync(IPAddress.Parse(ipAddress), port);
+                    if (client.Connected)
+                    {
+                        using (NetworkStream netStream = client.GetStream())
+                        {
+                            int readTotal;
+                            byte[] data = new byte[256];
+
+                            while ((readTotal = netStream.Read(data, 0, data.Length)) != 0)
+                            {
+                                ReceivedWeight = Convert.ToDouble(Encoding.UTF8.GetString(data, 0, readTotal));
+                            }
+                        }
+                        client.Close();
+                    }
+                }
+            }
+            catch (Exception e1)
+            {
+                ReceivedWeight = 0;
+                Console.WriteLine(e1.ToString());
+            }
+        }
+
+        void timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            TextDateTime.Invoke((Action)delegate { TextDateTime.Text = DateTime.Now.ToString(); });
+            LabelWeightReceived.Invoke((Action)delegate { LabelWeightReceived.Text = ReceivedWeight.ToString(); });
+            statusStrip1.Invoke((Action)delegate { toolStripStatusLabel1.Text = DateTime.Now.ToString(); });
+        }
+        #endregion
+
+        #region Print Section
+        private void PrintWeighMentUnique()
+        {
+            string path = $"{AppContext.BaseDirectory}\\weighment{DateTime.Now.ToString("yyyy_MM_dd_hh_mm_ss_fff")}.txt";
+
+            string templateContents = File.ReadAllText($"{AppContext.BaseDirectory}\\Reports\\Weighment.txt");
+
+            //https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-8.0
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            Dictionary<string, string> keyValuePairs2 = new Dictionary<string, string>();
+            keyValuePairs.Add("@SNo", TextSerialNo.Text);
+            keyValuePairs.Add("@Date", DateTime.Now.ToShortDateString());
+            keyValuePairs.Add("@Time", DateTime.Now.ToShortTimeString());
+            keyValuePairs.Add("@VNoSpaceBraceVTypeEoBrace", $"{TextVehicleRegNo.Text} ({drpVehicleType.Text})");
+            keyValuePairs.Add("@VNo(VType)", $"{TextVehicleRegNo.Text}({drpVehicleType.Text})");
+            keyValuePairs.Add("@VType", drpVehicleType.Text);
+            keyValuePairs.Add("@Amount", TextAmount.Text);
+            keyValuePairs.Add("@MatName", drpMaterialName.Text);
+            keyValuePairs.Add("@Weight", TextNetWeight.Text);
+
+            foreach (var keyValue in keyValuePairs)
+            {
+                foreach (Match m in Regex.Matches(templateContents, keyValue.Key))
+                {
+                    //https://stackoverflow.com/questions/56004152/what-is-simpliest-way-to-get-line-number-and-position-no-in-regex-matches-charct
+                    long lineNumber = templateContents.Substring(0, m.Index).LongCount(chr => chr == '\n') + 1;
+                    int fis = templateContents.LastIndexOf("\n", m.Index);
+                    int posi = m.Index - fis;
+
+                    string fstr = templateContents.Substring(m.Index, keyValue.Key.Length + 2);
+                    int padlen = Convert.ToInt32(fstr.Substring(fstr.Length - 2, 2));
+
+                    if (keyValuePairs2.ContainsKey(fstr))
+                        continue;
+
+                    keyValuePairs2.Add(fstr, keyValue.Value.PadRight(padlen));
+
+                    //templateContents = templateContents.Replace(fstr, keyValue.Value);
+                    Console.WriteLine($"Found {m.Value} at line {lineNumber} at position {m.Index} at fis {fis} at posi {posi}");
+                }
+            }
+            foreach (var keyValue in keyValuePairs2)
+            {
+                templateContents = templateContents.Replace(keyValue.Key, keyValue.Value);
+            }
+
+            using (StreamWriter sw = new StreamWriter(path, false))
+            {
+                sw.Write(templateContents);
+                sw.Close();
+            }
+            //  System.Diagnostics.Process.Start($"{AppContext.BaseDirectory}\\p.bat {AppContext.BaseDirectory}\\weighment1.txt");
+
+            //https://stackoverflow.com/questions/6103705/how-can-i-send-a-file-document-to-the-printer-and-have-it-print
+            var pi = new ProcessStartInfo(path);
+            pi.UseShellExecute = true;
+            pi.Verb = "print";
+            //pi.Arguments = "PATH_TO_PRINTER";pi.Verb = "PrintTo";
+            var process = System.Diagnostics.Process.Start(pi);
+        }
+
+        private void PrintWeighMent()
+        {
+            string path = $"{AppContext.BaseDirectory}\\weighment{DateTime.Now.ToString("yyyy_MM_dd_hh_mm_ss_fff")}.txt";
+
+            string templateContents = File.ReadAllText($"{AppContext.BaseDirectory}\\Reports\\Weighment.txt");
+
+            //https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-8.0
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            Dictionary<string, string> keyValuePairs2 = new Dictionary<string, string>();
+            keyValuePairs.Add("@SNo", TextSerialNo.Text);
+            keyValuePairs.Add("@Date", DateTime.Now.ToShortDateString());
+            keyValuePairs.Add("@Time", DateTime.Now.ToShortTimeString());
+            keyValuePairs.Add("@VNoSpaceBraceVTypeEoBrace", $"{TextVehicleRegNo.Text} ({drpVehicleType.Text})");
+            keyValuePairs.Add("@VNo(VType)", $"{TextVehicleRegNo.Text}({drpVehicleType.Text})");
+            keyValuePairs.Add("@VType", drpVehicleType.Text);
+            keyValuePairs.Add("@Amount", TextAmount.Text);
+            keyValuePairs.Add("@MatName", drpMaterialName.Text);
+            keyValuePairs.Add("@Weight", TextNetWeight.Text);
+
+            foreach (var keyValue in keyValuePairs)
+            {
+                foreach (Match m in Regex.Matches(templateContents, keyValue.Key))
+                {
+                    //https://stackoverflow.com/questions/56004152/what-is-simpliest-way-to-get-line-number-and-position-no-in-regex-matches-charct
+                    long lineNumber = templateContents.Substring(0, m.Index).LongCount(chr => chr == '\n') + 1;
+                    int fis = templateContents.LastIndexOf("\n", m.Index);
+                    int posi = m.Index - fis;
+
+                    string fstr = templateContents.Substring(m.Index, keyValue.Key.Length + 2);
+                    int padlen = Convert.ToInt32(fstr.Substring(fstr.Length - 2, 2));
+
+                    if (keyValuePairs2.ContainsKey(fstr))
+                        continue;
+
+                    keyValuePairs2.Add(fstr, keyValue.Value.PadRight(padlen));
+
+                    //templateContents = templateContents.Replace(fstr, keyValue.Value);
+                    Console.WriteLine($"Found {m.Value} at line {lineNumber} at position {m.Index} at fis {fis} at posi {posi}");
+                }
+            }
+            foreach (var keyValue in keyValuePairs2)
+            {
+                templateContents = templateContents.Replace(keyValue.Key, keyValue.Value);
+            }
+
+            using (StreamWriter sw = new StreamWriter(path, false))
+            {
+                sw.Write(templateContents);
+                sw.Close();
+            }
+            //  System.Diagnostics.Process.Start($"{AppContext.BaseDirectory}\\p.bat {AppContext.BaseDirectory}\\weighment1.txt");
+
+            //https://stackoverflow.com/questions/6103705/how-can-i-send-a-file-document-to-the-printer-and-have-it-print
+            var pi = new ProcessStartInfo(path);
+            pi.UseShellExecute = true;
+            pi.Verb = "print";
+            //pi.Arguments = "PATH_TO_PRINTER";pi.Verb = "PrintTo";
+            var process = System.Diagnostics.Process.Start(pi);
+        }
+        #endregion
+
+        private void ClearDataGrid()
+        {
+            GridData.Clear();
+            gvWeighment.DataSource = null;
+        }
+
+        private void PopulateDataGrid(List<WeighInfo> weighInfos)
+        {
+            if (weighInfos != null && weighInfos.Count > 0)
+            {
+                WeighInfo weighInfo = weighInfos.First();
+                GridData = dataAccess.GetRecselWeighMaster(weighInfo.SerialNo, TextVehicleRegNo.Text);
+
+                FormBaseSerialNo = weighInfo.SerialNo;
+                HasTareWeight = Convert.ToDecimal(weighInfo.TareWeight) > 0;
+
+                if (GridData != null && GridData.Count > 0)
+                {
+                    WeighInfo wi = GridData.FirstOrDefault();
+                    WeighInfo wiLast = GridData.LastOrDefault();
+
+                    if (wi != null)
+                    {
+                        drpVehicleType.Text = wi.VehicleName;
+                    }
+                    if (wiLast != null)
+                    {
+                        drpMaterialName.Text = (!string.IsNullOrEmpty(wiLast.MaterialName)) ? wiLast.MaterialName : "EMPTY";
+
+                        TextContainerNo.Text = (!string.IsNullOrEmpty(wiLast.ContainerNo)) ? wiLast.ContainerNo : "";
+                        FrameContainer.Visible = (!string.IsNullOrEmpty(wiLast.ContainerNo));
+                    }
+
+                    TextGrossWeight.Text = (wiLast.GrossWeight > 0) ? wiLast.GrossWeight.ToString() : "";
+                    TextTareWeight.Text = (wiLast.TareWeight > 0) ? wiLast.TareWeight.ToString() : "";
+                    TextNetWeight.Text = (wiLast.NetWeight > 0) ? wiLast.NetWeight.ToString() : "";
+
+                    gvWeighment.AutoGenerateColumns = false;
+                    gvWeighment.DataSource = GridData;
+                }
+            }
+        }
+
+        private void SetAmount()
+        {
+            var vhtp = drpVehicleType.SelectedValue.ToString().Split('$');
+            TextAmount.Text = IsMaterialEmpty ? vhtp[1] : vhtp[2];
+        }
+
+        private void ComExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ComFind_Click(object sender, EventArgs e)
+        {
+            SecondFindInd = btnFindClicked = FrameFind.Visible = true;
+            TextFindVehRegNo.Text = "";
+            TextFindVehRegNo.Select();
+            FrameButton1.Enabled = FrameContainer.Visible = false;
+
+            AcceptButton = CommandFindProceed;
+            CancelButton = CommandFindCancel;
+        }
+
+        private void SetNewSerialNumber()
+        {
+            ////   if (RecLastSerialNo.Rows.Count > 0)
+            {
+                char letter = char.Parse(TextSerialNo.Text.Substring(0, 1).ToUpper());
+                int number = Convert.ToInt32(TextSerialNo.Text.Substring(1, 5));
+
+                letter = (number == 20000) ? (letter == 'z' || letter == 'Z') ? 'A' : (char)(((int)letter) + 1) : letter;
+
+                NewSrNo = $"{letter}{((number == 20000) ? 1 : (number + 1)).ToString("d5")}";
+
+                ////     RecLastSerialNo.Rows[0]["srno"] = NewSrNo;
+            }
+            //// else
+            {
+                NewSrNo = "A00002";
+            }
+        }
+
+        private void UpdateForm()
+        {
+            SetNewSerialNumber();
+            SaveWeighInfo();
+        }
+
+        /* Start of the application process */
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            //todo:test that this works when there is no data
+            IsFormLoading = true;
+            SetData(dataAccess.GetAddNewWeighInfo());
+            ReceivedWeight = 0d; LabelWeightReceived.Text = "";
+
+            btnAddClicked = FrameMain.Enabled = Framebutton2.Visible = FrameButton4.Visible = true;
+            FrameButton1.Visible = FrameButton3.Visible = FrameContainer.Visible = ComSave.Enabled = ComPrintUnique.Enabled = btnOldTareWt.Enabled = btnOldGrossWt.Enabled = false;
+            TextVehicleRegNo.Select();
+            IsFormLoading = false;
+        }
+
+        private void TextVehicleRegNo_LostFocus(object sender, EventArgs e)
+        {
+            if (IsWeighReceived)
+                return;
+
+            FrameContainer.Visible = false;
+            if (btnAddClicked)
+            {
+                var reminder = dataAccess.GetReminder(TextVehicleRegNo.Text);
+
+                if (!string.IsNullOrEmpty(reminder))
+                {
+                    FrameMain.Enabled = Framebutton2.Enabled = false;
+                    FrameReminder.Visible = true;
+                    AcceptButton = CommandOk;
+                    TextReminder.Text = reminder;
+                    CommandOk.Select();
+                }
+            }
+
+            if (!SecondFindInd)
+            {
+                ClearDataGrid();
+
+                var listWeighMaster = dataAccess.GetLatestNewStatusWeighment(TextVehicleRegNo.Text);
+
+                chkNewWeight.Checked = (listWeighMaster.Count == 0);
+
+                PopulateDataGrid(listWeighMaster);
+            }
+        }
+
+        private void VehicleType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (IsFormLoading || btnCancelAddClicked || btnBackClicked)
+                return;
+
+            SetAmount();
+        }
+
+        private void MaterialName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IsMaterialEmpty = drpMaterialName.Text == "EMPTY";
+
+            if (IsFormLoading || btnCancelAddClicked || btnBackClicked)
+                return;
+
+            SetAmount();
+
+            TextNetWeight.Text = TextTareWeight.Text = "";
+            WeighInfo lastWeight = GridData.LastOrDefault();
+
+            //todo:move it to SetWeighmentAndTime
+
+            SetWeighmentAndTime((!chkNewWeight.Checked && !HasTareWeight && IsMaterialEmpty) ? lastWeight.GrossWeight.ToString() : "",
+                TareTime,
+            (!chkNewWeight.Checked && HasTareWeight && IsMaterialEmpty) ? lastWeight.TareWeight.ToString() : (!chkNewWeight.Checked && IsMaterialEmpty) ? lastWeight.GrossWeight.ToString() : "",
+                   GrossTime,
+                "",
+                  false); //todo:hardcode to false?
+        }
+
+        private void TextVehicleRegNo_TextChanged(object sender, EventArgs e)
+        {
+            if (!chkNewWeight.Checked & !SecondFindInd)
+            {
+                ClearDataGrid();
+                chkNewWeight.Checked = true;
+            }
+
+            IsWeighReceived = false;
+        }
+
+        private void ComSave_Click(object sender, EventArgs e)
+        {
+            UpdateForm();
+            PrintWeighMent();
+            FrameButton1.Visible = true;
+            Framebutton2.Visible = false;
+            FrameButton3.Visible = false;
+            FrameButton4.Visible = false;
+            FrameMain.Enabled = false;
+            ComExit.Select();
+            IsWeighReceived = false;
+        }
+
+        private void ComPrintUnique_Click(object sender, EventArgs e)
+        {
+            PrintWeighMentUnique();
+            IsWeighReceived = false;
+        }
+
+        private void CommandOk_Click(object sender, EventArgs e)
+        {
+            btnAddClicked = false;
+            FrameMain.Enabled = true;
+            Framebutton2.Enabled = true;
+            FrameReminder.Visible = false;
+            chkNewWeight.Select();
+            // CommandOk.Default = false;
+        }
+
+        private void CommandRemoveMessage_Click(object sender, EventArgs e)
+        {
+            TextReminder.Text = "";
+            FrameMain.Enabled = Framebutton2.Enabled = true;
+            btnAddClicked = FrameReminder.Visible = false;
+            chkNewWeight.Select();
+            //CommandOk.Default = false;
+        }
+
+        private void CommandPro_Click(object sender, EventArgs e)
+        {
+            if (OWCheck == 1)
+            {
+                if (Convert.ToInt32(TextOldWt.Text) != 0)
+                {
+                    TextTareWeight.Text = TextOldWt.Text;
+                    TareTime = Convert.ToDateTime(TextOldWtTime.Text);
+                    if (Convert.ToInt32(TextTareWeight.Text) != 0 && Convert.ToInt32(TextGrossWeight.Text) != 0)
+                    {
+                        TextNetWeight.Text = Math.Abs(Convert.ToInt32(TextGrossWeight.Text) - Convert.ToInt32(TextTareWeight.Text)).ToString();
+                    }
+                    else
+                    {
+                        TextNetWeight.Text = "";
+                    }
+                }
+                else
+                {
+                    TextTareWeight.Text = "";
+                    TextNetWeight.Text = "";
+                }
+                //CommandPro.Default = false;
+                //CommandCan.Cancel = false;
+
+                FrameButton4.Enabled = true;
+                FrameOldWt.Visible = false;
+
+                if (!btnFindClicked)
+                {
+                    FrameMain.Enabled = true;
+                    Framebutton2.Enabled = true;
+                    ComSave.Select();
+                }
+                else
+                {
+                    FrameButton3.Enabled = true;
+                    CommandPrintFind.Select();
+                }
+            }
+            else
+            {
+                if (drpMaterialName.Text == "EMPTY")
+                {
+                    if (Convert.ToInt32(TextOldWt.Text) != 0)
+                    {
+                        TextGrossWeight.Text = TextOldWt.Text;
+                        GrossTime = Convert.ToDateTime(TextOldWtTime.Text);
+                        if (Convert.ToInt32(TextTareWeight.Text) != 0 && Convert.ToInt32(TextGrossWeight.Text) != 0)
+                        {
+                            TextNetWeight.Text = Math.Abs(Convert.ToInt32(TextGrossWeight.Text) - Convert.ToInt32(TextTareWeight.Text)).ToString();
+                        }
+                        else
+                        {
+                            TextNetWeight.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        TextGrossWeight.Text = "";
+                        TextNetWeight.Text = "";
+                    }
+                }
+                else if (Convert.ToInt32(TextOldWt.Text) != 0)
+                {
+                    TextTareWeight.Text = TextOldWt.Text;
+                    TareTime = Convert.ToDateTime(TextOldWtTime.Text);
+                    if (Convert.ToInt32(TextTareWeight.Text) != 0 && Convert.ToInt32(TextGrossWeight.Text) != 0)
+                    {
+                        TextNetWeight.Text = Math.Abs(Convert.ToInt32(TextGrossWeight.Text) - Convert.ToInt32(TextTareWeight.Text)).ToString();
+                    }
+                    else
+                    {
+                        TextNetWeight.Text = "";
+                    }
+                }
+                else
+                {
+                    TextTareWeight.Text = "";
+                    TextNetWeight.Text = "";
+                }
+                //CommandPro.Default = false;
+                //CommandCan.Cancel = false;
+                FrameOldWt.Visible = false;
+                FrameButton4.Enabled = true;
+
+                if (!btnFindClicked)
+                {
+                    FrameMain.Enabled = true;
+                    Framebutton2.Enabled = true;
+                    ComSave.Select();
+                }
+                else
+                {
+                    FrameButton3.Enabled = true;
+                    CommandPrintFind.Select();
+                }
+            }
+
+            if (!btnFindClicked)
+            {
+                int reccnt = gvWeighment.RowCount;
+                //      reccnt = reccnt + 1;
+                gvWeighment.Rows[reccnt].Cells[2].Value = TextGrossWeight.Text;
+                gvWeighment.Rows[reccnt].Cells[3].Value = TextTareWeight.Text;
+                gvWeighment.Rows[reccnt].Cells[4].Value = TextNetWeight.Text;
+                //    reccnt = reccnt - 1;
+            }
+
+            OWCheck = 0;
+        }
+
+        private void CommandCan_Click(object sender, EventArgs e)
+        {
+            FrameOldWt.Visible = false;
+            AcceptButton = null;
+            CancelButton = null;
+            if (!btnFindClicked)
+            {
+                FrameMain.Enabled = true;
+                Framebutton2.Enabled = true;
+                FrameButton4.Enabled = true;
+                ComSave.Select();
+            }
+            else
+            {
+                FrameButton4.Enabled = true;
+                FrameButton3.Enabled = true;
+                CommandPrintFind.Select();
+            }
+
+            OWCheck = 0;
+        }
+
+        private void btnCancelAdd_Click(object sender, EventArgs e)
+        {
+            btnCancelAddClicked = true;
+            ResetFields();
+            FrameMain.Enabled = btnCancelAddClicked = false;
+            ComExit.Select();
+        }
+
+        private void ComReceiveWeight_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LabelWeightReceived.Text = ReceivedWeight.ToString();
+                SetWeight();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void SetWeight()
+        {
+            IsWeighReceived = true;
+            ClearThreeWeighFields();
+
+            if (chkNewWeight.Checked)
+            {
+                SetWeighmentAndTime(IsMaterialEmpty ? ReceivedWeight.ToString() : "",
+                    IsMaterialEmpty ? DateTime.Now : dtEmpty,
+                    !IsMaterialEmpty ? ReceivedWeight.ToString() : "",
+                    !IsMaterialEmpty ? DateTime.Now : dtEmpty,
+                    "",
+                    !IsMaterialEmpty);
+            }
+            else
+            {
+                WeighInfo lastweight = GridData.LastOrDefault();
+
+                if (HasTareWeight)
+                {
+                    SetWeighmentAndTime((lastweight.GrossWeight == 0) ? lastweight.TareWeight.ToString() : lastweight.GrossWeight.ToString(),
+                    lastweight.WeighDate,
+                    ReceivedWeight.ToString(),
+                    DateTime.Now,
+                    TextNetWeight.Text = Math.Abs(Convert.ToDecimal(TextGrossWeight.Text) - Convert.ToDecimal(TextTareWeight.Text)).ToString(),
+                    true);
+                }
+                else
+                {
+                    SetWeighmentAndTime(IsMaterialEmpty ? ReceivedWeight.ToString() : lastweight.GrossWeight.ToString(),
+                    IsMaterialEmpty ? DateTime.Now : lastweight.WeighDate,
+                    !IsMaterialEmpty ? ReceivedWeight.ToString() : lastweight.GrossWeight.ToString(),
+                    !IsMaterialEmpty ? DateTime.Now : lastweight.WeighDate,
+                    TextNetWeight.Text = Math.Abs(Convert.ToDecimal(TextGrossWeight.Text) - Convert.ToDecimal(TextTareWeight.Text)).ToString(),
+                    true);
+                }
+            }
+
+            GridData.RemoveAll(r => r.IsNew);
+
+            GridData.Add(new WeighInfo()
+            {
+                SerialNo = TextSerialNo.Text,
+                MaterialName = drpMaterialName.Text,
+                GrossWeight = (TextGrossWeight.Text == "") ? 0 : Convert.ToInt32(TextGrossWeight.Text),
+                TareWeight = (TextTareWeight.Text == "") ? 0 : Convert.ToInt32(TextTareWeight.Text),
+                NetWeight = (TextNetWeight.Text == "") ? 0 : Convert.ToInt32(TextNetWeight.Text),
+                WeighDate = DateTime.Now,
+                IsNew = true,
+            });
+
+            //https://stackoverflow.com/questions/13231149/datagridview-not-updating-refreshing
+
+            BindingSource bs = new BindingSource();
+            bs.DataSource = GridData;
+            gvWeighment.DataSource = bs;
+
+            ComSave.Enabled = true;
+            ComPrintUnique.Enabled = true;
+        }
+
+        private void SetWeighmentAndTime(string tareWeight, DateTime? tareTime, string grossWeight, DateTime? grossTime, string netWeight, bool isEnable)
+        {
+            TextTareWeight.Text = tareWeight;
+            TareTime = tareTime;
+            TextGrossWeight.Text = grossWeight;
+            GrossTime = grossTime;
+            TextNetWeight.Text = netWeight;
+            btnOldTareWt.Enabled = isEnable;
+        }
+
+        private void ClearThreeWeighFields()
+        {
+            TextTareWeight.Text = TextGrossWeight.Text = TextNetWeight.Text = "";
+        }
+
+        private void btnOldWt_Click(object sender, EventArgs e)
+        {
+            Label14.Text = ((Button)sender).Name.Contains("Gross") ? "Gross Weights" : "Tare Weights";
+            var columnName = ((Button)sender).Name.Contains("Gross") ? "grossweight" : "tareweight";
+            int owCheck = ((Button)sender).Name.Contains("Gross") ? 2 : 1;
+            TextOldWt.Text = TextOldWtTime.Text = "";
+            ListOldWt.Items.Clear();
+            ListOldWtTime.Items.Clear();
+
+            var RecOldWt = dataAccess.SelectRecordsFromDB($"select * from weighmaster where vehicleregno='{TextVehicleRegNo.Text}'" + "order by srno desc");
+
+            if (RecOldWt.Rows.Count != 0)
+            {
+                foreach (DataRow dr in RecOldWt.Rows)
+                {
+                    ListOldWt.Items.Add(dr[columnName].ToString());
+                    if (Convert.ToInt32(dr[columnName]) != 0)
+                    {
+                        ListOldWtTime.Items.Add(String.Format(dr[$"{columnName}date"].ToString(), "dd/mm/yyyy HH:MM"));
+                    }
+                    else
+                    {
+                        ListOldWtTime.Items.Add(" ");
+                    }
+                }
+            }
+
+            if (!btnFindClicked)
+                Framebutton2.Enabled = false;
+            else
+                FrameButton3.Enabled = false;
+
+            OWCheck = owCheck;
+            CommandPro.Enabled = FrameMain.Enabled = FrameButton4.Enabled = false;
+            FrameOldWt.Visible = true;
+            AcceptButton = CommandPro;
+            CancelButton = CommandCan;
+            ListOldWt.Select();
+        }
+
+        private void CommandPrintFind_Click(object sender, EventArgs e)
+        {
+            PrintWeighMent();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            btnFindClicked = false;
+            btnBackClicked = true;
+            ResetFields();
+            ComExit.Select();
+            btnBackClicked = false;
+        }
+
+        // Called by btnCancelAdd_Click and btnCancelAdd_Click
+        // btnBack_Click did not have code drpCustomerName.Text = LabelWeightReceived.Text = "";
+        // and  chkNewWeight.Checked = IsWeighReceived = false;
+        private void ResetFields()
+        {
+            TextSerialNo.Text = TextVehicleRegNo.Text = TextAmount.Text = TextGrossWeight.Text = TextTareWeight.Text = TextNetWeight.Text = "";
+            drpCustomerName.Text = LabelWeightReceived.Text = "";
+            chkNewWeight.Checked = IsWeighReceived = false;
+            ClearDataGrid();
+            drpVehicleType.SelectedValue = 1;
+            drpMaterialName.SelectedValue = 0;
+            btnOldTareWt.Enabled = btnOldGrossWt.Enabled = false;
+            Framebutton2.Visible = FrameButton3.Visible = FrameButton4.Visible = FrameContainer.Visible = false;
+            FrameButton1.Visible = true;
+        }
+
+        private void CheckNewWeighment_Click(object sender, EventArgs e)
+        {
+            if (btnCancelAddClicked)
+                return;
+
+            if (!SecondFindInd)
+            {
+                ClearDataGrid();
+                if (!chkNewWeight.Checked)
+                {
+                    List<WeighInfo> weighInfos = dataAccess.GetLatestNewStatusWeighment(TextVehicleRegNo.Text);
+                    if (weighInfos.Any())
+                    {
+                        MessageBox.Show("No Records for the Current Register Number found");
+                        chkNewWeight.Checked = true;
+                        //   reccnt = 0;
+                    }
+                    else
+                    {
+                        PopulateDataGrid(weighInfos);
+                    }
+                }
+                else
+                {
+                    //   reccnt = 0;
+                    TextGrossWeight.Text = "";
+                    TextTareWeight.Text = "";
+                    TextNetWeight.Text = "";
+                }
+            }
+
+            FrameContainer.Visible = false;
+            TextContainerNo.Text = "";
+        }
+
+        private void ComContainer_Click(object sender, EventArgs e)
+        {
+            FrameContainer.Visible = (FrameContainer.Visible == false);
+
+            if (FrameContainer.Visible)
+                TextContainerNo.Select();// TextContainerNo.SetFocus();
+        }
+
+        private void ListOldWt_Click(object sender, EventArgs e)
+        {
+            CommandPro.Enabled = true;
+            TextOldWt.Text = ListOldWt.Items[ListOldWt.SelectedIndex].ToString();
+            ListOldWtTime.SelectedIndex = ListOldWt.SelectedIndex;
+            TextOldWtTime.Text = ListOldWtTime.Items[ListOldWtTime.SelectedIndex].ToString();
+        }
+
+        private void gvWeighment_MouseEventHandler(object sender, MouseEventArgs e)
+        {
+            if (gvWeighment.Rows.Count > 0 && btnFindClicked)
+            {
+                SecondFindInd = true;
+
+                var weighinfo = dataAccess.SelectRecordForFindDataGrid(gvWeighment.SelectedRows[0].Cells[0].Value.ToString());
+                SetData(weighinfo);
+
+                SecondFindInd = false;
+            }
+        }
+
+        //todo:Need to check this first
+        private void SetData(WeighInfo w)
+        {
+            if (w != null)
+            {
+                TextSerialNo.Text = w.SerialNo;
+                TextVehicleRegNo.Text = w.VehicleRegNo;
+                TextAmount.Text = w.Amount.ToString();
+
+                chkNewWeight.Checked = (w.WeighStatus == "N");
+
+                drpVehicleType.Text = w.VehicleName;
+                drpMaterialName.Text = (!string.IsNullOrEmpty(w.MaterialName)) ? w.MaterialName : "EMPTY";
+                FrameContainer.Visible = (!string.IsNullOrEmpty(w.ContainerNo));
+                TextContainerNo.Text = w.ContainerNo;
+
+                TextGrossWeight.Text = (w.GrossWeight > 0) ? w.GrossWeight.ToString() : "";
+                TextTareWeight.Text = (w.TareWeight > 0) ? w.TareWeight.ToString() : "";
+                TextNetWeight.Text = (w.NetWeight > 0) ? w.NetWeight.ToString() : "";
+
+                drpCustomerName.SelectedValue = w.CustomerCode;
+            }
+        }
+
+        private void CommandFindCancel_Click(object sender, EventArgs e)
+        {
+            SecondFindInd = btnFindClicked = FrameFind.Visible = false;
+            FrameButton1.Enabled = true;
+            ComExit.Select();
+            AcceptButton = CancelButton = null;
+        }
+
+        private void CommandFindProceed_Click(object sender, EventArgs e)
+        {
+            GridData = dataAccess.GetWeighInfosByVehRegNo(TextFindVehRegNo.Text);
+
+            if (GridData.Count > 0)
+            {
+                gvWeighment.AutoGenerateColumns = false;
+                gvWeighment.DataSource = GridData;
+
+                FrameButton3.Visible = FrameButton1.Enabled = true;//todo:potential bug? enable but make the frameButton1 visible as false
+                FrameFind.Visible = FrameButton1.Visible = false;
+
+                var w = GridData.LastOrDefault();
+
+                SetData(w);
+
+                GrossTime = (w.GrossWeight > 0) ? Convert.ToDateTime(w.GrossWeightDate) : GrossTime;
+                TareTime = (w.TareWeight > 0) ? Convert.ToDateTime(w.TareWeightDate) : TareTime;
+
+                FrameButton4.Visible = btnOldTareWt.Enabled = btnOldGrossWt.Enabled = true;
+                CommandPrintFind.Select();
+            }
+            else
+            {
+                MessageBox.Show("No Matching Records found for the given Registration No");
+                FrameFind.Visible = false;
+                FrameButton1.Enabled = true;
+                ComExit.Select();
+                btnFindClicked = false;
+            }
+
+            SecondFindInd = false;
+            AcceptButton = null;
+            CancelButton = null;
+        }
+
+
+        #region Database Methods        
+        private void SaveWeighInfo()
+        {
+            DataAccess dataAccess = new DataAccess();
+            dataAccess.SaveWeighInfo(new SaveWeight()
+            {
+                NewSerialNo = NewSrNo,
+                SerialNo = TextSerialNo.Text,
+                VehicleRegNo = TextVehicleRegNo.Text,
+                MaterialName = (drpMaterialName.Text == "EMPTY") ? "0" : drpMaterialName.SelectedValue.ToString(),
+
+                VehicleType = drpVehicleType.SelectedValue.ToString(),
+
+                GrossWeight = TextGrossWeight.Text == "" ? 0 : Convert.ToDouble(TextGrossWeight.Text),
+                TareWeight = (TextTareWeight.Text == "") ? 0 : Convert.ToDouble(TextTareWeight.Text),
+                NetWeight = (TextNetWeight.Text == "") ? 0 : Convert.ToDouble(TextNetWeight.Text),
+
+                Amount = TextAmount.Text,
+                WeighStatus = chkNewWeight.Checked ? "N" : "O",
+                BaseSerialNo = chkNewWeight.Checked ? TextSerialNo.Text : FormBaseSerialNo,
+
+
+                GrossTime = GrossTime.ToString(),
+                TareTime = TareTime.ToString(),
+                WeighDate = DateTime.Now.ToString(),
+
+                ContainerNo = TextContainerNo.Text,
+                CustomerNo = !string.IsNullOrEmpty(drpCustomerName.Text.Trim()) ? Convert.ToInt32(drpCustomerName.SelectedValue) : 0
+            });
+        }
+
+        #endregion
+
+        #region LoadDropdown
+        void SetDropdownvalues()
+        {
+            drpCustomerName.DisplayMember = "CustomerName";
+            drpCustomerName.ValueMember = "CustomerCode";
+            drpCustomerName.DataSource = dataAccess.SelectRecordsFromDB($"select * from CustomerMaster order by CustomerName");
+            drpCustomerName.SelectedItem = 0;
+
+            drpMaterialName.DisplayMember = "matname";
+            drpMaterialName.ValueMember = "matno";
+            drpMaterialName.DataSource = dataAccess.SelectRecordsFromDB($"select * from material order by matno");
+            drpMaterialName.SelectedItem = 0;
+
+            drpVehicleType.DisplayMember = "vehname";
+            drpVehicleType.ValueMember = "vehnoext";
+            drpVehicleType.DataSource = dataAccess.SelectRecordsFromDB($"select CStr(vehno)+CStr('$')+CStr(TareRate)+CStr('$')+CStr(GrossRate) as [vehnoext], vehname from vehicle");
+            drpVehicleType.SelectedItem = 1;
+        }
+        #endregion
+    }
+}

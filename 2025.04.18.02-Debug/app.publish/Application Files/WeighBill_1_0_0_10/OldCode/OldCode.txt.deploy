@@ -1,0 +1,381 @@
+﻿//var    RecSettingl = SelectRecordsFromDB($"select wm.srno as [Serial No], v.vehname, m.matname" +
+//        $" ( from weighmaster wm  " +
+//        $"left join vehicle v on wm.vehno = v.vehno ) " +
+//        $"left join material m on wm.matno = m.matno " +
+//        $" where wm.vehicleregno='qa1232' and wm.basesrno= 'A00111' order by wm.srno");
+
+
+
+                //DataView dvRecWeighMaster = new DataView(RecWeighMaster);
+                //// RecWeighMaster.FindLast("VehicleRegNo='" + TextVehicleRegNo.Text + "' and weighstatus='N'");
+                //dvRecWeighMaster.RowFilter = $"vehicleregno = '{TextVehicleRegNo.Text}' and weighstatus='N'";
+
+                //DataTable dtRecWeighMaster = dvRecWeighMaster.ToTable();
+
+
+                
+        private void CommandFindProceed_Click(object sender, EventArgs e)
+        {
+            RecFindWeighMaster = SelectRecordsFromDB($"select * from weighmaster " +
+                $"where vehicleregno='{TextFindVehRegNo.Text}' order by srno");
+
+            if (RecFindWeighMaster.Rows.Count > 0)
+            {
+                cnt = 1;
+
+                foreach (DataRow dr in RecFindWeighMaster.Rows)
+                {
+                    if (cnt > MSFlexGrid1.Rows.Count - 1)
+                    {
+                        MSFlexGrid1.Rows.Add(1);
+                    }
+                    MSFlexGrid1.Rows[cnt].Cells[0].Value = dr["srno"].ToString();
+                    if (Convert.ToInt32(dr["matno"]) == 0)
+                    {
+                        MSFlexGrid1.Rows[cnt].Cells[1].Value = "EMPTY";
+                    }
+                    else
+                    {
+                        DataView dvRecMaterial = new DataView(RecMaterial);
+                        dvRecMaterial.RowFilter = $"matno = {Convert.ToInt32(dr["matno"])}";
+
+                        DataTable dtRecMaterial = dvRecMaterial.ToTable();
+                        MSFlexGrid1.Rows[cnt].Cells[1].Value = dtRecMaterial.Rows[0]["matname"].ToString();
+                    }
+                    MSFlexGrid1.Rows[cnt].Cells[2].Value = Convert.ToInt32(dr["grossweight"]);
+                    MSFlexGrid1.Rows[cnt].Cells[3].Value = Convert.ToInt32(dr["tareweight"]);
+                    MSFlexGrid1.Rows[cnt].Cells[4].Value = Convert.ToInt32(dr["netweight"]);
+                    MSFlexGrid1.Rows[cnt].Cells[5].Value = Convert.ToInt32(dr["weighdate"]);
+
+                    cnt = cnt + 1;
+                }
+                FrameFind.Visible = false;
+                FrameButton1.Enabled = true;
+                FrameButton1.Visible = false;
+                FrameButton3.Visible = true;
+
+                int lastCnt = RecFindWeighMaster.Rows.Count - 1;
+
+                TextSerialNo.Text = RecFindWeighMaster.Rows[lastCnt]["srno"].ToString();
+                TextVehicleRegNo.Text = RecFindWeighMaster.Rows[lastCnt]["vehicleregno"].ToString();
+                TextAmount.Text = RecFindWeighMaster.Rows[lastCnt]["amount"].ToString();
+                if (RecFindWeighMaster.Rows[lastCnt]["weighstatus"].ToString() == "N")
+                {
+                    CheckNewWeighment.Checked = true;
+                }
+                else
+                {
+                    CheckNewWeighment.Checked = false;
+                }
+                if (Convert.ToInt32(RecFindWeighMaster.Rows[lastCnt]["matno"]) == 0)
+                {
+                    ComMaterialName.Text = "EMPTY";
+                }
+                else
+                {
+                    DataView dvRecMaterial = new DataView(RecMaterial);
+                    dvRecMaterial.RowFilter = $"matno = {Convert.ToInt32(RecFindWeighMaster.Rows[lastCnt]["matno"])}";
+
+                    DataTable dtRecMaterial = dvRecMaterial.ToTable();
+
+                    if (dtRecMaterial.Rows.Count > 0)
+                    {
+                        ComMaterialName.Text = dtRecMaterial.Rows[0]["matname"].ToString();
+                    }
+                }
+
+                DataView dvRecVehicle = new DataView(RecVehicle);
+                dvRecVehicle.RowFilter = $"vehno = {Convert.ToInt32(RecWeighMaster.Rows[lastCnt]["vehno"])}";
+
+                DataTable dtRecVehicle = dvRecVehicle.ToTable();
+
+                if (dtRecVehicle.Rows.Count > 0)
+                {
+                    ComVehicleType.Text = dtRecVehicle.Rows[0]["vehname"].ToString();
+                }
+                if (RecFindWeighMaster.Rows[lastCnt]["containerno"].ToString().Length > 0)
+                {
+                    TextContainerNo.Text = RecFindWeighMaster.Rows[lastCnt]["containerno"].ToString();
+                    FrameContainer.Visible = true;
+                }
+                if (Convert.ToInt32(RecFindWeighMaster.Rows[lastCnt]["grossweight"]) > 0)
+                {
+                    TextGrossWeight.Text = RecFindWeighMaster.Rows[lastCnt]["grossweight"].ToString();
+                    GrossTime = RecFindWeighMaster.Rows[lastCnt]["grossweightdate"].ToString();
+                }
+                if (Convert.ToInt32(RecFindWeighMaster.Rows[lastCnt]["tareweight"]) > 0)
+                {
+                    TextTareWeight.Text = RecFindWeighMaster.Rows[lastCnt]["tareweight"].ToString();
+                    TareTime = RecFindWeighMaster.Rows[lastCnt]["tareweightdate"].ToString();
+                }
+                if (Convert.ToInt32(RecFindWeighMaster.Rows[lastCnt]["netweight"]) > 0)
+                {
+                    TextNetWeight.Text = RecFindWeighMaster.Rows[lastCnt]["netweight"].ToString();
+                }
+                FrameButton4.Visible = true;
+                CommandOldTareWt.Enabled = true;
+                CommandOldGrossWt.Enabled = true;
+                CommandPrintFind.Select();
+            }
+            else
+            {
+                MessageBox.Show("No Matching Records found for the given Registration No");
+                FrameFind.Visible = false;
+                FrameButton1.Enabled = true;
+                ComExit.Select();
+                findch = 0;
+            }
+
+            cc = 0;
+            //CommandFindProceed.Default = false;
+            //CommandFindCancel.Cancel = false;
+        }
+
+                
+        private void SetMsFlexGrid()
+        {
+            DataView dv = new DataView(RecWeighMaster);
+            dv.RowFilter = $"VehicleRegNo = '{TextVehicleRegNo.Text}' and weighstatus='N' "; //("VehicleRegNo='" + TextVehicleRegNo.Text + "' and weighstatus='N'");
+
+            DataTable dtRecWeighMaster = dv.ToTable();
+
+            if (dtRecWeighMaster != null && dtRecWeighMaster.Rows.Count > 0)
+            {
+                /*
+                RecselWeighMaster = SelectRecordsFromDB($"select wm.srno as [Serial No], " +
+                    $" m.matname as [Material Name], " +
+                    $" wm.grossweight as [Gross Weight], wm.tareweight as [Tare Weight], wm.netweight as [Net Weight], " +
+                    $" wm.weighdate as [Date & Time], " +
+                    $" v.vehname as [Vehicle Name], wm.containerno as [ContainerNo] " +
+                    $" from (weighmaster wm " +
+                    $" left join vehicle v on wm.vehno = v.vehno) " +
+                    $" left join material m on wm.matno = m.matno " +
+                    $" where wm.vehicleregno='{TextVehicleRegNo.Text}' and wm.basesrno= '{dtRecWeighMaster.Rows[0]["srno"].ToString()}' order by wm.srno");
+                */
+
+                RecselWeighMaster = SelectRecordsFromDB($"select wm.srno, " +
+                                 $" m.matname as [MaterialName], " +
+                                 $" wm.grossweight, wm.tareweight, wm.netweight, " +
+                                 $" wm.weighdate, " +
+                                 $" v.vehname as [VehicleName], wm.containerno as [ContainerNo] " +
+                                 $" from (weighmaster wm " +
+                                 $" left join vehicle v on wm.vehno = v.vehno) " +
+                                 $" left join material m on wm.matno = m.matno " +
+                                 $" where wm.vehicleregno='{TextVehicleRegNo.Text}' and wm.basesrno= '{dtRecWeighMaster.Rows[0]["srno"].ToString()}' order by wm.srno");
+
+                BaseSerialNo = dtRecWeighMaster.Rows[0]["srno"].ToString();
+                WeighType = (Convert.ToDecimal(dtRecWeighMaster.Rows[0]["tareweight"]) > 0) ? 1 : 2;
+
+                if (RecselWeighMaster.Rows.Count > 0)
+                {
+                    ComVehicleType.Text = RecselWeighMaster.Rows[0]["VehicleName"].ToString();
+                    ComMaterialName.Text = (!string.IsNullOrEmpty(RecselWeighMaster.Rows[0]["MaterialName"].ToString())) ? RecselWeighMaster.Rows[0]["Vehicle Name"].ToString() : "EMPTY";
+
+                    if (RecselWeighMaster.Rows[0]["containerno"].ToString().Length > 0)
+                    {
+                        TextContainerNo.Text = RecselWeighMaster.Rows[0]["ContainerNo"].ToString();
+                        FrameContainer.Visible = true;
+                    }
+
+                    MSFlexGrid1.AutoGenerateColumns = false;
+                    MSFlexGrid1.DataSource = RecselWeighMaster;
+
+                    TextGrossWeight.Text = (Convert.ToInt32(RecselWeighMaster.Rows[0]["GrossWeight"]) > 0) ? RecselWeighMaster.Rows[0]["GrossWeight"].ToString() : "";
+                    TextTareWeight.Text = (Convert.ToInt32(RecselWeighMaster.Rows[0]["TareWeight"]) > 0) ? RecselWeighMaster.Rows[0]["TareWeight"].ToString() : "";
+                    TextNetWeight.Text = (Convert.ToInt32(RecselWeighMaster.Rows[0]["NetWeight"]) > 0) ? RecselWeighMaster.Rows[0]["NetWeight"].ToString() : "";
+                }
+            }
+        }
+
+        //private void UpdateForm1()
+        //{
+        //    if (RecLastSerialNo.Rows.Count > 0)
+        //    {
+        //        //RecLastSerialNo.Rows[0].BeginEdit();
+
+        //        srno = TextSerialNo.Text;
+        //        char letter = char.Parse(srno.Substring(0, 1).ToUpper());
+        //        int number = Convert.ToInt32(srno.Substring(1, 5));
+
+        //        if (number == 20000)
+        //        {
+        //            if (letter == 'z' || letter == 'Z')
+        //                letter = 'A';
+        //            else
+        //                letter = (char)(((int)letter) + 1);
+
+        //            NewSrNo = letter + "00001";
+        //        }
+        //        else
+        //        {
+        //            NewSrNo = letter + (number++).ToString("d5");
+        //        }
+        //        //RecLastSerialNo.Rows[0]["srno"] = NewSrNo;
+        //        //RecLastSerialNo.AcceptChanges();
+        //    }
+        //    else
+        //    {
+        //        //DataRow drAdd = RecLastSerialNo.Rows.Add();
+        //        //drAdd["srno"] = "A00002";
+
+        //        //RecLastSerialNo.AcceptChanges();
+
+        //        NewSrNo = "A00002";
+        //    }
+
+        //    UpdateSerialNumber(NewSrNo);
+
+        //    DataRow newRow = RecWeighMaster.NewRow();
+        //    newRow["srno"] = TextSerialNo.Text;
+        //    newRow["vehicleregno"] = TextVehicleRegNo.Text;
+        //    newRow["matno"] = (ComMaterialName.Text == "EMPTY") ? 0 : ComMaterialName.SelectedValue;
+        //    newRow["vehno"] = ComVehicleType.SelectedValue;
+        //    newRow["grossweight"] = TextGrossWeight.Text;
+        //    newRow["grossweightdate"] = Convert.ToInt32(TextGrossWeight.Text) > 0 ? GrossTime : null;
+        //    newRow["tareweight"] = TextTareWeight.Text;
+        //    newRow["tareweightdate"] = Convert.ToInt32(TextTareWeight.Text) > 0 ? TareTime : null;
+        //    newRow["netweight"] = TextNetWeight.Text;
+        //    newRow["amount"] = TextAmount.Text;
+        //    newRow["weighstatus"] = (CheckNewWeighment.Checked) ? "N" : "O";
+        //    newRow["basesrno"] = (CheckNewWeighment.Checked) ? TextSerialNo.Text : BaseSerialNo;
+
+        //    newRow["weighdate"] = DateTime.Now.ToString();
+        //    newRow["containerno"] = TextContainerNo.Text;
+
+        //    RecWeighMaster.Rows.Add(newRow);
+
+        //    RecWeighMaster.AcceptChanges();
+
+        //    CustomerCode = (!string.IsNullOrEmpty(ComCustomerName.Text.Trim())) ? Convert.ToInt32(ComCustomerName.SelectedValue) : 0L;
+
+        //    newRow = RecWeighBilling.NewRow();
+        //    newRow["srno"] = TextSerialNo.Text;
+        //    newRow["vehicleregno"] = TextVehicleRegNo.Text;
+        //    newRow["amount"] = TextAmount.Text;
+        //    newRow["weighdate"] = DateTime.Now.ToString();
+        //    newRow["CustomerCode"] = CustomerCode;
+        //    RecWeighBilling.Rows.Add(newRow);
+        //    RecWeighBilling.AcceptChanges();
+        //}
+
+
+          private void OldMSFlexGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (MSFlexGrid1.Rows.Count > 0 & MSFlexGrid1.Rows.Count < cnt & findch == 1)
+            {
+                cc = 1;
+
+                DataView dvRecFindWeighMaster = new DataView(RecFindWeighMaster);
+                //RecFindWeighMaster.FindFirst("srno=" + "'" + MSFlexGrid1.TextMatrix(MSFlexGrid1.Row, 0) + "'");
+                dvRecFindWeighMaster.RowFilter = $"srno = '{MSFlexGrid1.SelectedRows[0].Cells[0]}'";
+
+                DataTable dtRecFindWeighMaster = dvRecFindWeighMaster.ToTable();
+
+                var t = RecFindWeighMaster.Select($"srno = '{MSFlexGrid1.SelectedRows[0].Cells[0]}'");
+
+                if (dtRecFindWeighMaster.Rows.Count > 0)
+                {
+                    TextSerialNo.Text = dtRecFindWeighMaster.Rows[0]["srno"].ToString();
+                    TextVehicleRegNo.Text = dtRecFindWeighMaster.Rows[0]["vehicleregno"].ToString();
+                    TextAmount.Text = dtRecFindWeighMaster.Rows[0]["amount"].ToString();
+
+                    CheckNewWeighment.Checked = (dtRecFindWeighMaster.Rows[0]["weighstatus"].ToString() == "N");
+
+                    if (Convert.ToInt32(dtRecFindWeighMaster.Rows[0]["matno"]) == 0)
+                    {
+                        ComMaterialName.Text = "EMPTY";
+                    }
+                    else
+                    {
+                        DataView dvRecMaterial = new DataView(RecMaterial);
+                        //RecMaterial.FindFirst("matno=" + Conversion.Str(RecFindWeighMaster["matno"]));
+                        dvRecMaterial.RowFilter = $"matno = '{dtRecFindWeighMaster.Rows[0]["matno"].ToString()}'";
+
+                        DataTable dtRecMaterial = dvRecMaterial.ToTable();
+
+                        if (dtRecMaterial.Rows.Count > 0)
+                        {
+                            ComMaterialName.Text = dtRecFindWeighMaster.Rows[0]["matname"].ToString();
+                        }
+                    }
+
+                    DataView dvRecVehicle = new DataView(RecVehicle);
+                    //RecVehicle.FindFirst("matno=" + Conversion.Str(RecFindWeighMaster["matno"]));
+                    dvRecVehicle.RowFilter = $"vehno = '{RecWeighMaster.Rows[0]["vehno"].ToString()}'";
+
+                    DataTable dtRecVehicle = dvRecVehicle.ToTable();
+
+                    if (dtRecVehicle.Rows.Count > 0)
+                    {
+                        ComVehicleType.Text = dtRecVehicle.Rows[0]["vehname"].ToString();
+                    }
+
+
+                    if (RecFindWeighMaster.Rows[0]["containerno"].ToString().Length > 0)
+                    {
+                        TextContainerNo.Text = RecFindWeighMaster.Rows[0]["containerno"].ToString();
+                        FrameContainer.Visible = true;
+                    }
+                    if (Convert.ToInt32(RecFindWeighMaster.Rows[0]["grossweight"]) > 0)
+                    {
+                        TextGrossWeight.Text = RecFindWeighMaster.Rows[0]["grossweight"].ToString();
+                        GrossTime = RecFindWeighMaster.Rows[0]["grossweightdate"].ToString();
+                    }
+                    else
+                    {
+                        TextGrossWeight.Text = "";
+                    }
+                    if (Convert.ToInt32(RecFindWeighMaster.Rows[0]["tareweight"]) > 0)
+                    {
+                        TextTareWeight.Text = RecFindWeighMaster.Rows[0]["tareweight"].ToString();
+                        TareTime = RecFindWeighMaster.Rows[0]["tareweightdate"].ToString();
+                    }
+                    else
+                    {
+                        TextTareWeight.Text = "";
+                    }
+                    if (Convert.ToInt32(RecFindWeighMaster.Rows[0]["netweight"]) > 0)
+                    {
+                        TextNetWeight.Text = RecFindWeighMaster.Rows[0]["netweight"].ToString();
+                    }
+                    else
+                    {
+                        TextNetWeight.Text = "";
+                    }
+                }
+                cc = 0;
+            }
+
+        }
+  
+
+
+   private void PrintWeighMentold()
+        {
+            string path = $"{AppContext.BaseDirectory}\\weighment1.txt";
+
+            string templateContents = File.ReadAllText($"{AppContext.BaseDirectory}\\Reports\\Weighment.txt");
+
+            int regnoLen = TextVehicleRegNo.TextLength;
+            int vtypeLen = ComVehicleType.Text.Length;
+
+            string ret = useRegex("|Space30|", "\\|Space(.*?)\\|");
+
+            templateContents = templateContents.Replace("|SNo|", TextSerialNo.Text.PadRight(6));
+            templateContents = templateContents.Replace("|Date|", DateTime.Now.ToString("dd/MM/yyyy"));
+            templateContents = templateContents.Replace("|Time|", DateTime.Now.ToString("HH:mm"));
+            templateContents = templateContents.Replace("|VNo|", TextVehicleRegNo.Text);
+            templateContents = templateContents.Replace("|VType|", ComVehicleType.Text.Substring(1, 25 - regnoLen));//.PadRight(26 - TextVehicleRegNo.TextLength - ComVehicleType.Text.Substring(1, 25 - TextVehicleRegNo.TextLength).Length));
+            templateContents = templateContents.Replace("|Amount|", TextAmount.Text);
+            templateContents = templateContents.Replace("|MatName|", ComMaterialName.Text);
+            templateContents = templateContents.Replace("|Weight|", TextNetWeight.Text);
+
+            using (StreamWriter sw = new StreamWriter(path, false))
+            {
+                sw.Write(templateContents);
+                sw.Close();
+            }
+            //  System.Diagnostics.Process.Start($"{AppContext.BaseDirectory}\\p.bat {AppContext.BaseDirectory}\\weighment1.txt");
+        }
+
+
