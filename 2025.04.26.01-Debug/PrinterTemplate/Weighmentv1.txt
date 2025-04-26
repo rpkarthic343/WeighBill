@@ -1,0 +1,36 @@
+﻿
+
+
+
+
+     |SNo|            |Date|                   |SNo|            |Date|
+                       |Time|                                          |Time|
+     |VNo|(|VType|)                   |VNo|(|VType|)
+
+     Rs.|Amount|                                       Rs.|Amount|
+
+     |MatName|                                          |MatName|
+
+
+
+     |Weight| Kg.  |Date|                   |Weight| Kg.  |Date|
+                       |Time|                                          |Time|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
