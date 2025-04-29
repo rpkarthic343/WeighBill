@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>z5HhAGhunYVVVf9aeeSmcT/9e1CZEY9Q1iVaUXASUL0=</dsig:DigestValue>
+        <dsig:DigestValue>Ows2oMj7d41TOqOjzw3c7iCbZdmbEW0BKlYgDsttid4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -218,13 +218,13 @@
       <dsig:DigestValue>bCnM9ZTAYEQtr8MIDVG51ojPqncj8+15D3nTVCTIFYk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="WeighBill.exe.config" size="1814">
+  <file name="WeighBill.exe.config" size="1822">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XqVFsta9crAHda1AF7SpI2G5w0xYiBxt4zWCDwrOmN4=</dsig:DigestValue>
+      <dsig:DigestValue>xEjfWWwp1s50z9NHuFHy3eua1/7uAEeegJrbu3pIvM0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WorkingCode\WeighForm_20250412_1.txt" size="39020">
