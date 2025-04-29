@@ -9,7 +9,7 @@
 
      Rs.@Amount06                                      Rs.@Amount06
 
-     @MatName25                      @MatName25
+     @MaterialName25                      @MaterialName25
 
 
 

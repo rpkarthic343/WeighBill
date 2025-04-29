@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WeighBill.exe" size="132096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WeighBill.exe" size="139776">
       <assemblyIdentity name="WeighBill" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IyHp67dgOnWPNRjVbWobj98jAOFjST4ywL9evBEMZuo=</dsig:DigestValue>
+        <dsig:DigestValue>z5HhAGhunYVVVf9aeeSmcT/9e1CZEY9Q1iVaUXASUL0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -173,13 +173,13 @@
       <dsig:DigestValue>V/PAasxokDfWUiVO4mumgXvoBD6g9pG367cqsN1j7jE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="PrinterTemplate\Weighment.txt" size="833">
+  <file name="PrinterTemplate\Weighment.txt" size="843">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YgiSaSCTodOF84oFIUagirO3dY2gpEG2IT02Jv88pdM=</dsig:DigestValue>
+      <dsig:DigestValue>HHL1MJvg2ylj1E445vzIV78OJzdctqZmT34UrnxsghE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="PrinterTemplate\Weighmentv1.txt" size="546">
@@ -218,13 +218,13 @@
       <dsig:DigestValue>bCnM9ZTAYEQtr8MIDVG51ojPqncj8+15D3nTVCTIFYk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="WeighBill.exe.config" size="1742">
+  <file name="WeighBill.exe.config" size="1814">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>COs5wh78+Z+cqsfC/ZlceBntCA8eId+Qc4966ksvnS8=</dsig:DigestValue>
+      <dsig:DigestValue>XqVFsta9crAHda1AF7SpI2G5w0xYiBxt4zWCDwrOmN4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WorkingCode\WeighForm_20250412_1.txt" size="39020">
